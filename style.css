@@ -1,0 +1,95 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    position: relative; /* Add this line */
+}
+
+/* Style the header */
+.header {
+    background-color: #42381f;
+    padding: 20px;
+    text-align: center;
+}
+
+.web_title {
+    font-size:50px;
+    border: 10px double black;
+    display: inline-block; /* To make the border wrap around the text */
+    padding: 15px; /* Adjust the padding to control the distance of the border from the text */
+}
+
+.logo {
+    width: 12%; 
+    height: 13%; 
+    position: absolute;
+    transform: translateY(5%); 
+    left: 20px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #625633;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 100vh;
+    position: relative; 
+    z-index: 1;
+}
+
+/* Left and right column */
+.column.side {
+    width: 10%;
+    background-color: #d7b96e;
+}
+
+/* Middle column */
+.column.middle {
+    text-align:center;
+    width: 80%;
+    background-color: #846f35;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: #42381f;
+    padding: 5px;
+    text-align: center;
+}
